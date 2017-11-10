@@ -4,6 +4,9 @@ import logo from './Logo.png';
 import './App.css';
 import './lib/animate.css'
 import {DropdownButton, ButtonGroup, MenuItem} from 'react-bootstrap';
+import {React_Bootstrap_Carousel} from 'react-bootstrap-carousel';
+import 'bootstrap/dist/css/bootstrap.css';
+import 'react-bootstrap-carousel/dist/react-bootstrap-carousel.css';
 
 function isSearched(searchTerm) {
   return (item) => {return item.title.toLowerCase().includes(searchTerm.toLowerCase());} 
@@ -71,22 +74,82 @@ class TopBar extends Component {
                         </ul>
                     </div>
                 </nav>
-                <br></br><br></br><br></br>
                 <div class="divider grey"></div>
             </div>
         )
     }
 }
 
+class Carousel extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {};
+    }
+    
+    render() {
+      const {leftIcon, rightIcon} = this.state;
+      return (
+        <div className="container-fluid">
+          <div className="row">
+            <div className="col-md-12">
+              <React_Bootstrap_Carousel
+                animation={true}
+                slideshowSpeed={7000}
+                leftIcon={leftIcon}
+                rightIcon={rightIcon}
+                ref={ (slider) => {this.slider=slider} }
+                className="carousel-fade"
+              >
+                <div style={{height:400}}>
+                    <div className="carousel-center">
+                        <div id = "intro">Welcome to Axiom</div>
+                    </div>
+                    <br></br><br></br><br></br>
+                    <div className = "carousel-caption d-none d-md-block">           
+                        <div><h2 style={{color:'#000'}}>The modular, flexible, lightweight 3D library focused on performance and rendering.</h2></div>                    
+                        <div>
+                            <ButtonGroup>
+                                <button class="btn btn-primary">Read the docs</button>
+                                <a href="https://github.com/Innoviox/Axiom" class="btn btn-info">Go to the <img class="github-btn" src="https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png"></img></a>
+                            </ButtonGroup>
+                        </div>
+                    </div>
+                </div>
+                <div style={{height:400,width:"100%",backgroundColor:"aqua"}}>
+                  <div className="carousel-caption">
+                    Video
+                  </div>
+                </div>
+                <div style={{height:400,width:"100%",backgroundColor:"lightpink"}}>
+                  <div className="carousel-caption">
+                    Text
+                  </div>
+                </div>
+                <div style={{height:400,width:"100%",backgroundColor:"lightblue"}}>
+                  <div className="carousel-caption">
+                    Text
+                  </div>
+                </div>
+                <div style={{height:400,width:"100%",backgroundColor:"lightblue"}}>
+                  <div className="carousel-caption">
+                    Youtube
+                  </div>
+                </div>
+              </React_Bootstrap_Carousel>
+            </div>
+          </div>
+        </div>
+      );
+    }
+};
+
 class App extends Component {
     render() {
         return (
             <div className="page">
                 <TopBar />
-                {/*
-                    <Jumbotron />
-                    <Content />
-                */}
+                <Carousel />
+                { /* <Content /> */ }
             </div>
         );
     }
