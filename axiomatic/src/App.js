@@ -1,9 +1,10 @@
 import React from 'react';
 import {Component} from 'react';
+import logowhite from './Logo-white.png';
 import logo from './Logo.png';
 import './App.css';
 import './lib/animate.css'
-import {DropdownButton, ButtonGroup, MenuItem} from 'react-bootstrap';
+import {DropdownButton, ButtonGroup, MenuItem, Button} from 'react-bootstrap';
 import {React_Bootstrap_Carousel} from 'react-bootstrap-carousel';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'react-bootstrap-carousel/dist/react-bootstrap-carousel.css';
@@ -41,40 +42,35 @@ class TopBar extends Component {
         const dropDownClass = [0, 1].map((i) => "dropdown" + this.state.dropDownStates[i]? " open" : "");
 
         return (
-            <div class="container-wide">
-                <nav className = "navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
-                    <div className = "topbar collapse navbar-collapse">
-                        <ul className = "topbar-left">
-                            <img className = "logo animated infinite tada" src={logo} alt="Axiom"></img>
-                            { /* <span class = "logo-text"> Axiom </span> */ }
-                            <div className = "dropdown">
+            <div>
+                <nav className = "navbar navbar-expand-lg navbar-dark navbar-fixed-top bg-secondary">
+                    <div class="container-fluid">
+                        <div className = "collapse navbar-collapse bs-navbar-collapse">
+                            <ul className = "topbar-left">
+                                <img className = "logo animated infinite tada" src={logo} alt="Axiom"></img>
+                                { /* <span class = "logo-text"> Axiom </span> */ }
                                 <ButtonGroup>
-                                    <DropdownButton bsStyle="success" title="primary" key="0" className={dropDownClass[0]} onClick={this.handleHover} onMouseLeave={this.handleHover} id = "bg-nested-dropdwn">
-                                      <MenuItem eventKey="1">Action</MenuItem>
-                                      <MenuItem eventKey="2">Another action</MenuItem>
-                                      <MenuItem eventKey="3" active>Active Item</MenuItem>
-                                      <MenuItem divider />
-                                      <MenuItem eventKey="4">Separated link</MenuItem>
-                                    </DropdownButton>
-                                    <DropdownButton bsStyle="success" title="primary" key="1" className={dropDownClass[1]} onClick={this.handleHover} onMouseLeave={this.handleHover} id = "bg-nested-dropdwn">
-                                      <MenuItem eventKey="1">Action</MenuItem>
+                                    <Button className="navbtn">GitHub</Button>
+                                    <DropdownButton bsStyle="default" title="primary" key="0" className={"navbtn " + dropDownClass[0]} onClick={this.handleHover} onMouseLeave={this.handleHover} id = "bg-nested-dropdwn">
+                                      <MenuItem eventKey="1" href="https://github.com/Innoviox/Axiom">GitHub</MenuItem>
                                       <MenuItem eventKey="2">Another action</MenuItem>
                                       <MenuItem eventKey="3" active>Active Item</MenuItem>
                                       <MenuItem divider />
                                       <MenuItem eventKey="4">Separated link</MenuItem>
                                     </DropdownButton>
                                 </ButtonGroup>
-                            </div>
-                        </ul>
-                        <ul className = "topbar-right">
-                            <form class="form-inline my-2 my-lg-0 search-form">
-                              <input class="form-control mr-sm-2" type="text" placeholder="Search the docs..." onInput = {this.handleSearching}></input>
-                              <button class={"btn " + (this.state.searching?"btn-primary":"btn-secondary")} type="submit" disabled={!this.state.searching}>Search</button>
-                            </form>
-                        </ul>
+                            </ul>
+                            <ul className = "topbar-right">
+                                <form class="form-inline my-2 my-lg-0 search-form">
+                                    <input class="form-control mr-sm-2" type="text" placeholder="Search the docs..." onInput = {this.handleSearching}></input>
+                                    <button class={"btn " + (this.state.searching?"btn-primary":"btn-secondary")} type="submit" disabled={!this.state.searching}>Search</button>
+                                </form>
+                            </ul>
+                        </div>
                     </div>
+                    <div class="divider grey"></div>
                 </nav>
-                <div class="divider grey"></div>
+                
             </div>
         )
     }
@@ -103,10 +99,10 @@ class Carousel extends React.Component {
                 <div style={{height:400}}>
                     <div className="carousel-center">
                         <div id = "intro">Welcome to Axiom</div>
+                        <br></br><br></br>
+                        <div><h2 style={{color:'#000'}}>The modular, flexible, lightweight 3D library focused on performance and rendering.</h2></div>    
                     </div>
-                    <br></br><br></br><br></br>
-                    <div className = "carousel-caption d-none d-md-block">           
-                        <div><h2 style={{color:'#000'}}>The modular, flexible, lightweight 3D library focused on performance and rendering.</h2></div>                    
+                    <div className = "carousel-caption">          
                         <div>
                             <ButtonGroup>
                                 <button class="btn btn-primary">Read the docs</button>
@@ -150,6 +146,7 @@ class App extends Component {
                 <TopBar />
                 <Carousel />
                 { /* <Content /> */ }
+                a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>a<br></br>
             </div>
         );
     }
