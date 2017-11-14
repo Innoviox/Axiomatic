@@ -1,23 +1,14 @@
 import React from 'react';
 import {Component} from 'react';
 import {DropdownButton, ButtonGroup, MenuItem, Button, Carousel} from 'react-bootstrap';
-import {React_Bootstrap_Carousel} from 'react-bootstrap-carousel';
 
-import logowhite from './assets/Logo-white.png';
 import logo from './assets/Logo.png';
 import carousel from './assets/carousel.png';
 
 import './lib/bootstrap.css';
 import './lib/lumen.css';
 import './lib/animate.css';
-//import 'react-bootstrap-carousel/dist/react-bootstrap-carousel.css';
 import './App.css';
-
-
-function isSearched(searchTerm) {
-  return (item) => {return item.title.toLowerCase().includes(searchTerm.toLowerCase());} 
-}
-
 
 class TopBar extends Component {
     
@@ -117,7 +108,6 @@ class MyCarousel extends React.Component {
     }
     
     render() {
-      const {leftIcon, rightIcon} = this.state;
       return (
           
         <div className="container-fluid">
