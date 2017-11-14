@@ -1,9 +1,13 @@
 .page {
-    padding-top: 50px; 
+    padding-top:80px;
     box-sizing:border-box; 
 }
 
-body { padding-top: 50px; }
+body {
+   padding-top:0px;
+   margin-top: 0px;
+}
+
 .logo { 
     width: 100px;
     height: 50px;
@@ -103,16 +107,10 @@ body { padding-top: 50px; }
 }
 
 .carousel {
-    border-width: medium;
-    border-color: black;
-    border-style: solid;
-    border: 5;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+    border-width: 10px;
+    border-color: #FF4136;
+    border-style: ridge;
+
 }
 .carousel-center {
     text-align: center;
@@ -138,25 +136,19 @@ carousel-inner>.item {
     padding-left: 12px;
 }
 
+
 .navbar {
     background: rgba(255,255,255,1.0);
 }
+
 
 nav > ul > li > a {
     text-decoration: none;
 }
 
-.btn-group {
-    /*
-    position: absolute;
-    top: 50%;
-    margin-top: 17px;
-    */
-}
 .navlink, .navbtn {
-  height: 50px;
-  line-height: 50px;
-  text-align: center;
+    height: 50px;
+    width: 100px;
 }
 
 .v-t-center {
@@ -166,19 +158,21 @@ nav > ul > li > a {
     background: #f5f5f5;
 }
 
+/*
 .navlink:hover::before, .navbtn:hover::before {
     content:'';
     position:absolute;
     width: 100%;
     height: 0;    
     left:0;
-    bottom:-13px; /*Change this to increase/decrease distance*/
+    bottom:-13px; 
     border-bottom: 13px solid #f5f5f5;     
 }
 
 .navbtn:hover::before {
     bottom: -15px;
 }
+*/
 
 .navlink:hover::after, .navbtn:hover::after {
     content:'';
@@ -186,11 +180,42 @@ nav > ul > li > a {
     width: 100%;
     height: 0;    
     left:0;
-    bottom:-15px; /*Change this to increase/decrease distance*/
+    bottom:-15px; 
     border-bottom: 2px solid #000;  
 }
 
 .nav > li > a:hover, .nav > li > a:focus {
   background-color: #000000;
   text-decoration: none;
+}
+
+
+.nav li.dropdown ul.dropdown-menu:before, .nav li.dropdown ul.dropdown-menu:after {
+  display: none;
+}
+
+.navbar {
+    position: fixed;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+    padding: 0.5rem 1rem;
+}
+
+.carousel-indicators {
+    left:20%;
+    margin:0px;
+    padding:0px;
 }
